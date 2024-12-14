@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>E1</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	var questions = [
+	{
+		prompt:"What's the color of banana? \n(a)red \n(b)blue \n(c) yellow",
+		answer:"c"
+
+	},
+
+	{
+		prompt:"What's the color of strawberry?\n (a)red \n(b) blue \n(c) yellow",
+		answer:"a"
+
+	}
+	]
+
+	var score = 0;
+	for(var i=0; i<questions.length; i++){
+		var input=prompt(questions[i].prompt);
+
+	if (input==questions[i].answer) {
+		score++;
+		alert("Correct!");
+	}
+	else {
+		alert("Wrong!");
+	}
+
+	}
+
+	alert("總共答對了" + score + "題");
+
+	
+/*
+	for(var i = 0; i<100; i++){
+		document.write(i);
+	    document.write("<br/>");
+	}
+
+/*
+	var friends = ["小黑","小白","小黃"];
+	for(var q = 0; q<friends.length; q++ ){
+		document.write(friends[q]);
+		document.write("<br/>");
+	}
+
+/*
+	var password = 1234;
+	var input;
+	var entry_count = 0;
+	var entry_limit = 3;
+	var out_of_limit = false;
+
+	while(password != input && !out_of_limit){
+
+		entry_count++; //放if之前跟 之後會影響次數
+
+		if(entry_count <= entry_limit){
+		input = prompt("請輸入密碼");
+
+		//entry_count++; //放這裡會多一次嘗試機會(4次)
+	}
+
+	else{
+		out_of_limit = true;
+	}
+}
+
+	if (out_of_limit){
+		alert("超出輸入次數");
+	}
+	else{
+		alert("恭喜登入成功");
+	}
+
+*/
+
+
+
+/* "A 'do...while' loop executes the body of the loop at least once before checking the specified condition for the first time.""
+
+	var i = 2;
+
+	do{
+		document.write(i)
+		document.write("<br/>");
+		i++;
+	} while(i<=4)
+*/
+
+// // 寫i = i++的話會造成i之值不變，導致死循環
+// //直接寫i++ 或是 ++i 
+
+/*特性	   i++（後置遞增）	      ++i（前置遞增）
+執行順序	先返回值，後遞增	     先遞增，後返回值
+返回值	返回遞增前的原值	      返回遞增後的新值
+用途   	當前操作需要舊值	         當前操作需要新值
+*/
+
+/* 先判斷while條件是否成立*/
+
+	// var i = 1;
+	// while(i<=4){
+	// 	document.write(i)
+	// 	document.write("<br/>");
+	// 	i++;
+	// }
+
+/*(1.)Object in real world
+  (2.)Array is []
+  (3.)Object && Function are {} 	
+*/
+// var movie = {
+// 	title: "刻在你心裡的名字",
+// 	duration:"114 minutes",
+// 	actors: [
+// 	{	
+// 		name:"陳",
+// 		age:23,
+// 		is_male:false
+// 	},
+// 	{
+// 		name:"Birdy",
+// 		age:21,
+// 		is_male:true
+// 	}
+// 	]
+
+// };
+
+// document.write(movie.actors[1].age);
+
+
+
+
+// var phrase ="Hello!";
+// document.write(phrase.length);
+
+
+
+
+// var person ={
+// 	name:"小捲毛",
+// 	age:20,
+// 	black_skin:true,
+// 	print_name:function(){
+// 		document.write(this.name);
+// 	}
+// };
+// 	person.print_name();
+
+
+// function maxnum(num1, num2, num3){
+// 	if (num1>=num2 && num1>=num3) {
+// 		return num1;
+// 	}
+// 	else if ( num2>=num1 && num2>=num3 ){
+// 		return num2;
+// 	}
+// 	else{
+// 		return num3;
+// 	}
+// }
+// document.write(maxnum(2,4322,25));
+
+// var score = 100;
+//  var rainy = false;
+// if (score==100 || !rainy) {
+//  	document.write("我給你1000塊")
+//  }
+//  else{
+//  	document.write("你給我3000")
+//  }
+
+
+//  var score = 90;
+//  var rainy = false;
+// if (score==100 || rainy) {
+//  	document.write("我給你1000塊")
+//  }
+//  else{
+//  	document.write("你給我3000")
+//  }
+
+
+
+
+
+// var score = 100;
+// var rainy = false;
+
+// if (score==100 && rainy) {
+// 	document.write("我給你1000塊")
+// }
+// else{
+// 	document.write("你給我3000")
+// }
+
+
+
+// var score = prompt("Enter your socre")
+// var score = 55;
+// if (score== 100) {
+// 	document.write("很扎實ㄟ，我給你1000元");
+// }
+// else if (score>=85) {
+// 	document.write("我給你500");
+// }
+// else if (score>=60) {
+// 	document.write("我給你100");
+// }
+// else{
+// 	document.write("你給我300");
+// }
+
+
+	// var input1 = window.prompt("Enter first number","0");
+	// var input2 = window.prompt("Enter second number","0");
+	// var input3 = window.prompt("Enter third number","0");
+
+	// var value1 = parseFloat( input1 );
+	// var value2 = parseFloat( input2 );
+	// var value3 = parseFloat( input3 );
+
+	// var maxValue = maximum( value1, value2, value3);
+
+	// document.writeln(
+	// "<p> First number:" + value1 + "</p>"+
+	// "<p> Second number:" + value2 + "</p>"+
+	// "<p> Third number:" + value3 + "</p>" +
+	// "<p> Maximum is: " + maxValue + "</p>");
+
+	// function maximum(x, y, z)
+	// {
+	// 	console.log("max!!");
+	// 	return Math.max(x, y, z);
+	// } 
+
+</script>
+
+</body>
+</html>
